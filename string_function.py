@@ -43,9 +43,26 @@ print(list5)
 str10 = "i like like you"
 print(str10.find("like"))
 print(str10.find("tid"))
+print(str10.find("like", 5)) # 5 다음 인덱스부터 찾겠다!
 
+# upper(), lower()
+str11 = "sdafjnmiADUBQWDWJ"
+print(str11.upper())
+print(str11.lower())
 
+# strip() 좌우로 특정한 문자열을 제거하는 함수
+str12 = "  ff asdsa ff  "
+str13 = "ff asdsa ff"
+print(str12.strip())
+print(str12.lstrip())
+print(str12.rstrip())
+print(str13.strip("f"))
+print(str13.lstrip("f"))
+print(str13.rstrip("f"))
 
+# eval() 문자열 수식을 계산해주는 함수
+exp = "(13+203)*131-233"
+print(eval(exp))
 
 
 
