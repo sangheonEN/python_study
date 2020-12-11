@@ -18,11 +18,13 @@
 # print("o의 갯수는 ", count, "개 입니다.")
 
 # 리스트 처리
-# sum = 0
-# list = [10, 21, 39, 40, 50]
-# for i in list:
-#     if i % 2 == 1:
-#         continue
-#     if i == 50:
-#         break
-#     print(i)
+sum = 0
+list = [10, 21, 39, 40, 50]
+for i in list:
+    if i % 2 == 1:
+        # print(i)
+        continue
+    if i == 50:
+        # print(i)
+        break
+    print(i)
