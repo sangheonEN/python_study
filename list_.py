@@ -53,10 +53,16 @@
 # print(a)
 # print(a.pop(0))      # pop 리스트내의 특정한 원소를 찾아서 출력함
 
+# 숫자형 list 변수를 문자열 list변수로 넣기
+alist = [1, 2, 3, 4, 5]
+blist = []
+for a in alist:
+    blist.append(str(a))
+print(blist)
 
-
-
-
+# sep = ""
+print("1","2","3")
+print("1","2","3", sep= "|")
 
 
 

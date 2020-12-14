@@ -4,20 +4,26 @@ a = "이d아"
 b = "ddd"
 print((a + b+"\t") * 5)
 
+# str() : 문자열 형변환
+rstr = 123
+print(str(rstr))
+print(str(134))
+
 # 문자열 인덱싱 및 슬라이스 기법
 a = "Hello World"
-print((a[0]+a[3]))
-print(a[-1])
+print("문자열 a = : {}".format(a))
+print("a[0]+a[3] = ", (a[0]+a[3]))
+print("a[-1] =", a[-1])
 print(a[2:3])
 print(a[2:4])
 print(a[2:5])
 print(a[2:6])
 print(a[2:7])
-print(a[:-2])
-print(a[0:-2])
-print(a[1:-2])
+print("a[:-2] =", a[:-2])
+print("a[0:-2] =", a[0:-2])
+print("a[1:-2] =", a[1:-2])
 print(a[:])
-print(a[0:7:2]) # 0~7인덱스 까지 2씩 올라가면서 출력 a[0], a[2], a[4], a[6]
+print("a[0:7:2] = {}".format(a[0:7:2])) # 0~7인덱스 까지 2씩 올라가면서 출력 a[0], a[2], a[4], a[6]
 
 # 문자열 변환 replace(기존 문자열, 변환할 문자열) 다른 변수에 넣어 준 뒤에 사용할 수 있음
 a = "HELLO WORLD DSAF"
@@ -47,5 +53,29 @@ c = 20
 print(c)
 print(c == 19)
 
+# 여러 줄의 문자열을 사용하고 싶을 때 """, ''' 사용
+a = """a"""
+b = '''b'''
+dochtml = """
+            <html>
+                <head>
+                </head>
+                <body>
+                    <h1, h2, j3>
+                </body>
+            </html>"""
 
+# 포맷팅 a, b, c, d, e, f 를 ','기준으로 짤라서 다시 c변수에 append해보고 c를 출력
+b = "a, b, c, d, e, f"
+c = []
+csplit = b.split(",")
+print(csplit)
+for cstr in csplit:
+    print("cstr =", cstr)
+    c.append(cstr)
+print(c)
 
+# 검색과 선택
+str1 = "a b c d e"
+print(str1.find("e"))
+print(str1.index("e"))

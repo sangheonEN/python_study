@@ -15,6 +15,15 @@
 #     print(data)
 # function(1, 2, 3)
 
+# 가변 매개변수. def aaa(a, b, *c) *c 더 들어올 수 있게 하기 위해 *를 적어줌.
+def aaa(a, b, *c):
+    print("a = {}".format(a))
+    print("b = {}".format(b))
+    print(c)
+    for cstr in c:
+        print("c = {}".format(cstr))
+aaa(10, 20, 30, 40, 50)
+
 # 함수안에서 전역변수 선언하기
 # def add3():
 #     global a # 전역 변수 사용
