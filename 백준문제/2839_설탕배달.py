@@ -23,32 +23,73 @@
 # - N을 8로 나누었을 때 나누어 떨어지는 몫 * 2 + 그 몫에 3 or 5로 나누어 떨어지는 몫
 
 # 2839 설탕 배달
-a = int(input())
-print(a)
-
-a5 = 0
-a3 = 0
-a8_RR = 0
-result = 0
-if a >= 3:
-    if a % 5 == 0:
-        result = a // 5
-    if a % 3 == 0:
-        result = a // 3
-    if a % 8 != 0:
-        a8 = a % 8
-        a8_R = 2 * (a // 8)
-        if a8 % 3 == 0:
-            a8_3 = a8 // 3
-            result = a8_R + a8_3
-        elif a8 % 5 == 0:
-            a8_5 = a8 // 5
-            result = a8_R + a8_5
-        else:
-            print(-1)
-    if a % 8 == 0:
-        result = 2 * (a // 8)
+N = int(input())
+box = 0
+while True:
+    if N % 5 and N >= 3 == 0:
+        box += N // 5
+        print(box)
+    N -= 3
+    box += 1
 else:
     print(-1)
-print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 삽질
+# a = int(input())
+# print(a)
+#
+# a5 = 0
+# a3 = 0
+# a8_RR = 0
+# result = 0
+# if a >= 3:
+#     if a % 5 == 0:
+#         result = a // 5
+#     if a % 3 == 0:
+#         result = a // 3
+#     if a % 8 != 0:
+#         a8 = a % 8
+#         a8_R = 2 * (a // 8)
+#         if a8 % 3 == 0:
+#             a8_3 = a8 // 3
+#             result = a8_R + a8_3
+#         elif a8 % 5 == 0:
+#             a8_5 = a8 // 5
+#             result = a8_R + a8_5
+#         else:
+#             print(-1)
+#     if a % 8 == 0:
+#         result = 2 * (a // 8)
+# else:
+#     print(-1)
+# print(result)
 
