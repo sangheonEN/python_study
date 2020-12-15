@@ -76,6 +76,31 @@ for cstr in csplit:
 print(c)
 
 # 검색과 선택
+# find()와 index()의 공통점
+# 해당 문자의 index를 출력한다.
+# find()와 index()의 차이점
+# find() : 문자열에 문자가 없을 때 -1 출력
+# index() : 문자열에 문자가 없을 때 오류 출력
 str1 = "a b c d e"
 print(str1.find("e"))
 print(str1.index("e"))
+print(str1.find("g"))
+print(str1.index("g"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

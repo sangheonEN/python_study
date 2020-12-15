@@ -80,9 +80,15 @@
 #     except Exception as e:
 #         print(e)
 
-# for과 in으로 순회하기.
-# 이터레이터는 유용하게 자주 쓰인다.
+# # for과 in으로 순회하기.
+# # 이터레이터는 유용하게 자주 쓰인다.
+# # for 문자 in 문자열:
+# word = "asdge"
+# for i in word:
+#     print(f"word = {i}")
 
-
+# list2 = range(0, 10, 2)
+# for _ in list:
+#     print(_)
 
 

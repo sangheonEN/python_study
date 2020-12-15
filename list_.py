@@ -53,16 +53,44 @@
 # print(a)
 # print(a.pop(0))      # pop 리스트내의 특정한 원소를 찾아서 출력함
 
-# 숫자형 list 변수를 문자열 list변수로 넣기
-alist = [1, 2, 3, 4, 5]
-blist = []
-for a in alist:
-    blist.append(str(a))
-print(blist)
+# # 숫자형 list 변수를 문자열 list변수로 넣기
+# alist = [1, 2, 3, 4, 5]
+# blist = []
+# for a in alist:
+#     blist.append(str(a))
+# print(blist)
+#
+# # sep = ""
+# print("1","2","3")
+# print("1","2","3", sep= "|")
 
-# sep = ""
-print("1","2","3")
-print("1","2","3", sep= "|")
+# # set {}
+# alist = [10, 10, 20, 40, 10, 20, 500]
+# print(alist)
+# bset = {10, 10, 20, 40, 10, 20, 500}
+# print(bset)
+#
+# # list() 형 변환
+# print(list("cat"))
 
+# # 슬라이스 항목 얻기!! 중요 list[시작:끝:step]
+# marxes = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+# print(marxes[0:2])
+# print(marxes[::2])
+# print(marxes[::-2])
+# print(marxes[::-1]) # 내림차순 정렬
+# marxes2 = ['dasf', 'vzvsd', '3qwef', 'vsd4d', 'fe5fewq', 'asd6xc', 'vw7re', 'qwer8a', 'aaa9aaa', 'bb10bb']
+# print(marxes2[::-1])
+# marxes2.reverse()      # 리스트를 변경할 뿐이지 값을 반환하지는 않음 그래서 print() 안에 있어도 None으로 출력
+# print(marxes2)
 
-
+# # 슬라이스 항목 바꾸기
+# number = [1, 2, 3, 4]
+# number[1:3] = [9, 10]
+# print(number)
+# number[1:3] = [10, 20, 30, 40, 50]   # 굳이 슬라이스 수와 오른쪽 변경할 원소의 수는 같지 않아도 됨.
+# print(number)
+# number[1:3] = []
+# print(number)
+# number[1:3] = ['waat']
+# print(number)

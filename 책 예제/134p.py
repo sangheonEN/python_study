@@ -26,5 +26,24 @@ for _ in range(3):
 #     # print(f"{count} : {questions[count]} {answers[count]}")
 #     # count += 1
 
+# # 5.3번 문자열 포맷팅
+# b = ["roast beef", "ham", "head", "clam"]
+# print(f"""My kitty cat likes {b[0]},\nMy kitty cat likes {b[1]},\nMy kitty cat fell on his {b[2]} And now thinks he's a {b[3]}.""")
 
+# # 5.5번
+# # 'salutation', 'name', 'product', 'verbed', 'room', 'animals', 'amount', 'percent', 'spokesman', 'job_title'
+# # letter.format() 사용
+# alist = ['salutation', 'name', 'product', 'verbed', 'room', 'animals', 'amount', 'percent', 'spokesman', 'job_title']
+# for i in alist:
+#     print("{}@gmail.com".format(i))
 
+# zip()함수!
+a1list = ["jteks5@", "alqlwlel@", "dltkdgjs@", "zzzz@", "dkfsdk@"]
+blist = ["naver.com", "gmail.com", "hanmail.net", "nate.com", "yahoo.com", ]
+for i, j in zip(a1list, blist):
+    print("{}{}".format(i, j))
+
+# # 5.6번
+# a = 'duck', 'gourd', 'spitz'
+# print("{} McDuckface\n{} McGourdface\n{} McSpitzface".format(a[0], a[1], a[2]))
+# print(f"{a[0]} McDuckface\n{a[1]} McGourdface\n{a[2]} McSpitzface")
