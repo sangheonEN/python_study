@@ -1,3 +1,14 @@
+# 생성방법
+# case1
+my_dict = {}               # 딕셔너리 초기화 및 선언
+my_dict["a"] = "aaa"
+my_dict["b"] = "bbb"
+my_dict["c"] = "ccc"
+print(my_dict)
+# case2
+dict1 = {"aa" : "aaa", "bb" : "bbb"}
+print(dict1)
+
 # 사전(dictionary) : key와 value의 한 쌍을 원소로 가지는 자료형
 dict = {}
 dict["이름"] = "name"
