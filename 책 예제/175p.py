@@ -11,6 +11,8 @@ print(year_lists[2])
 # 7.3 번 years_list 중 가장 나이가 많은 년도?
 print(year_lists[-1])
 
+# 7.4 번
+
 # 7.10 번 컴프리핸션을 이용해 range(10)에서 짝수 리스트 만들어 보자.
 alist = [number for number in range(10) if number % 2 == 0]
 print(alist[1:5])
