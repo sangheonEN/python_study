@@ -6,6 +6,11 @@
 # 2. 다음 node에 접근하기 위해서 해당 node에 다음 node 주소를 저장
 # 3. 마지막 node로 링크드 리스트가 끝났으면, 마지막 node의 주소 저장 구역에 새로 생성한 Node를 가르키게 한다.
 
+# 구현할때 핵심!!!
+# 1. 코드로 다음 node를 가르키는 방법 : 이전 node 다음 node 가르킬 주소영역에 다음 node value를 저장
+# 2. 다음 node로 이동 : node = node.next_address
+# 3. 만약에 다음을 가르키는 주소가 없으면 지금 node 주소를 가르키는 영역에 새로운 node value를 저장한다. node.next_address = Node(data)
+
 class Node:
     def __init__(self, data, next_address = None):
         self.data = data
