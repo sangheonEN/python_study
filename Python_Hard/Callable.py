@@ -42,7 +42,7 @@ class A():
 
 
 def b(a, b):
-    print(a, b)
+    print("ㅋㅋㅋㅋ")
 
 if __name__ == "__main__":
     # c1 = Coordinate(1, 2)
@@ -54,6 +54,12 @@ if __name__ == "__main__":
     # visit_website(index)
     # visit_website(Indexview())
 
+    """
+    callable한 인스턴스는 a()이렇게 호출할 수 있다. 다만, a만 호출하면 포인터인 주소값이 저장됨.
+    """
     a = A(10, 2)
-    a(b)
+    b = a()
+    c = a
+    print(b)
+    print(c)
 
