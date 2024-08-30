@@ -13,12 +13,16 @@ def send_event_parameter():
                 message = '1'            # 이벤트 파라미터
                 s.sendall(message.encode())  # 메시지 전송
                 print(f"Sent event parameter: {message}")
-            
-            time.sleep(10)  # 10초 대기
+
+            time.sleep(2)  # 3초 대기
+
+        except ConnectionRefusedError:
+            print("Server not available, retrying in 10 seconds...")
+            time.sleep(3)  # 서버가 없을 때 3초 후 재시도
 
         except Exception as e:
             print(f"Error: {e}")
-            break
+            time.sleep(3)  # 다른 오류 발생 시 3초 후 재시도
 
 if __name__ == "__main__":
     send_event_parameter()
