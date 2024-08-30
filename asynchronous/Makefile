@@ -8,8 +8,10 @@ CXXFLAGS = -std=c++17 -I D:/cpp_lib/TransmissionControlProtocol/boost_1_86_0
 LDFLAGS = -L D:/cpp_lib/TransmissionControlProtocol/boost_1_86_0/stage/lib -lws2_32
 
 # 대상 파일 설정
-TARGET = event_receiver
-SOURCES = event_receiver.cpp
+TARGET = python_control
+SOURCES = python_control.cpp
+# TARGET = event_receiver
+# SOURCES = event_receiver.cpp
 
 # 빌드 명령
 all: $(TARGET)
