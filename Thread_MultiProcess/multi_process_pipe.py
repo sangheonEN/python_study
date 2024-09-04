@@ -20,7 +20,7 @@ def worker(conn):
     audio_data = conn.recv()
 
     print(f"child pipe received data: {audio_data}")
-
+    # child pipe send함수가 호출되면, parent_pipe.recv()로 반환.
     conn.send("child response!")
     conn.close()
 
@@ -40,6 +40,7 @@ if __name__ == "__main__":
 
     parent_pipe.send("hello world")
 
+    # recv함수가 호출되면, worker 함수로 넘어감.
     print(f"parent_pipe main process received : {parent_pipe.recv()}")
 
     # process ending point
