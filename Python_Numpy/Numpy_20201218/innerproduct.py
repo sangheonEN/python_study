@@ -46,5 +46,53 @@ D = np.abs(VN+d)/NN
 print(f"D = {round(D, 2)}")
 
 
+#%%
+import numpy as np
 
+def cross_entropy_loss(predictions, targets, axis_param, epsilon=1e-12):
+    """
+    Calculate the cross-entropy loss.
 
+    Parameters:
+    predictions (numpy.ndarray): The predicted probabilities (output of softmax).
+                                 Shape: (batch_size, num_classes)
+    targets (numpy.ndarray): The true labels (one-hot encoded).
+                             Shape: (batch_size, num_classes)
+    epsilon (float): A small value to prevent log(0).
+
+    Returns:
+    float: The average cross-entropy loss over the batch.
+    """
+    # Clip predictions to avoid log(0)
+    predictions = np.clip(predictions, epsilon, 1. - epsilon)
+    
+    # Compute cross-entropy loss for each example
+    ce_loss = -np.sum(targets * np.log(predictions), axis=axis_param)
+    
+    # Average loss over the batch
+    return np.mean(ce_loss)
+
+t=0.07
+N = 2 # pair N
+labels = np.arange(N)
+image_feature = 512
+text_feature = 768
+embedding_feature = 256
+I_e = np.random.rand(N, image_feature)
+T_e = np.random.rand(N, text_feature)
+W_I = np.random.rand(image_feature, embedding_feature)
+W_T = np.random.rand(text_feature, embedding_feature)
+
+I = np.dot(I_e, W_I)
+T = np.dot(T_e, W_T)
+
+# L2 정규화는 두 벡터 사이의 거리를 계산하는 것이 아니라 벡터의 길이(또는 노름)가 1이 되도록 스케일링
+I_embedding = I / np.linalg.norm(I, axis=1, keepdims=True)
+T_embedding = T / np.linalg.norm(T, axis=1, keepdims=True)
+
+final_logits = np.dot(I_embedding, T_embedding.T) * np.exp(t)
+
+loss_I = cross_entropy_loss(final_logits, labels, axis_param=0)
+loss_T = cross_entropy_loss(final_logits, labels, axis_param=1)
+total_loss = (loss_I + loss_T) / 2
+print("zzzz")
