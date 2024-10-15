@@ -21,5 +21,7 @@ if __name__ == "__main__":
     mp_event1 = mp.Event()
     
     mp_event1.clear()
+        
+    print(f"mp_event1.clear() -> mp_event1: {mp_event1.is_set()}")
     
     is_event(mp_event1)

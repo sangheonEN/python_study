@@ -32,3 +32,10 @@ if __name__ == "__main__":
     
     if not False:
         print("참입니다.")
+        
+    if not False or False:
+        print("False or False\n")
+    
+    if not True or 0:
+        print("False or 0\n")
+    
