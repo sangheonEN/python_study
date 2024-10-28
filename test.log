@@ -1,0 +1,22 @@
+Test: root - ERROR - b function call error: division by zero
+
+Test: root - ERROR - Traceback: Traceback (most recent call last):
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 38, in <module>
+    b()
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 10, in b
+    a()
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 6, in a
+    return 1/0
+ZeroDivisionError: division by zero
+
+
+Test: 2024-10-28 17:19:32,855 - root - ERROR - b function call error: division by zero
+
+Test: 2024-10-28 17:19:32,856 - root - ERROR - Traceback: Traceback (most recent call last):
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 38, in <module>
+    b()
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 10, in b
+    a()
+  File "D:\git_hub\python_study\python_logging\logging_tutorial.py", line 6, in a
+    return 1/0
+ZeroDivisionError: division by zero
