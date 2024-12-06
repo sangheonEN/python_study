@@ -22,7 +22,7 @@ def consumer(queue, event):
     
     while not event.is_set() or not queue.empty():
               
-        if not queue.empty():
+        if not queue.empty():  
             item = queue.get()
             print(f"Consumed : {item}\n")
             time.sleep(5.0)

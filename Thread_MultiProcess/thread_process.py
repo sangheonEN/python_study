@@ -8,6 +8,11 @@
 
 데이터 통신 방법 : 공유 변수를 통해 직접 통신할 수 있지만 문제를 피하기 위해 동기화가 필요합니다.
 
+python thread docs 3.12.8 version 내용 검토 (https://docs.python.org/ko/3.12/library/threading.html#module-threading)
+
+1. 
+
+
 """
 
 import threading
