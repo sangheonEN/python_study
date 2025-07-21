@@ -33,5 +33,7 @@ async def print_async():
     result = await do_async()
     print(result)
 
-await print_async() # 주피터 노트북 환경에서는 이벤트 루프가 자동으로 실행되어 있어서 await로 호출해도 됨.
-# asyncio.run(print_async()) # IDE를 활용한 일반 파이썬 스크립트에서 개발할 때는 이렇게 호출 
+# Jupyter 노트북에서는 셀에서 ``await`` 키워드를 사용할 수 있지만 일반 파이썬 스크립트에서는
+# ``asyncio.run`` 으로 비동기 함수를 실행해야 한다.
+if __name__ == "__main__":
+    asyncio.run(print_async())
